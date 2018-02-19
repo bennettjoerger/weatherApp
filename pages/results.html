@@ -1,4 +1,8 @@
 <h1>Forecast for {{ city }}</h1>
+
+<hr>
+Days: <a href="/forcast/2" ng-class="{ 'bg-primary': days === '2'}">2</a> | <a href="/forcast/5" ng-class="{ 'bg-primary': days === '5'}"> | </a> <a href="/forcast/7" ng-class="{ 'bg-primary': days === '7'}">7</a>
+<hr>
 <div ng-repeat="w in weatherResult.list">
 
   <div class="row">
