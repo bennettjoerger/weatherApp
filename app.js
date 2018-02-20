@@ -59,7 +59,24 @@ weatherApp.controller('secondController', ['$scope', '$resource', 'cityService',
     $scope.convertToDate = function(dt){
 
       return new Date(dt * 1000);
-    }
+    };
 
 
 }]);
+
+weatherApp.directive("weatherReport", function(){
+
+  return {
+    restrict: 'E',
+    templateUrl: 'directives/weatherReport.html',
+    scope: {
+      weatherDay: "=",
+      convertToStandard: "&",
+      convertToDate: "&",
+      dateFormat: "&"
+
+
+    }
+  }
+
+})
